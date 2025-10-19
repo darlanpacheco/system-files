@@ -1,0 +1,17 @@
+[Default Applications]
+x-scheme-handler/http=org.mozilla.firefox.desktop
+x-scheme-handler/https=org.mozilla.firefox.desktop
+image/png=org.gimp.GIMP.desktop
+image/jpg=org.gimp.GIMP.desktop
+image/jpeg=org.gimp.GIMP.desktop
+image/webp=org.gimp.GIMP.desktop
+image/gif=org.gimp.GIMP.desktop
+video/mp4=org.mozilla.firefox.desktop
+video/webm=org.mozilla.firefox.desktop
+video/x-matroska=org.mozilla.firefox.desktop
+video/ogg=org.mozilla.firefox.desktop
+audio/mpeg=org.mozilla.firefox.desktop
+audio/wav=org.mozilla.firefox.desktop
+audio/ogg=org.mozilla.firefox.desktop
+audio/mp4=org.mozilla.firefox.desktop
+application/pdf=org.mozilla.firefox.desktop
