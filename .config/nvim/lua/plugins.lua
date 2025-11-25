@@ -7,9 +7,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
-		"neovim/nvim-lspconfig",
-	},
-	{
 		"hrsh7th/nvim-cmp",
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-nvim-lsp",
@@ -40,6 +37,5 @@ require("lazy").setup({
 	},
 	{
 		"ziglang/zig.vim",
-		"rust-lang/rust.vim",
 	},
 })

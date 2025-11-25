@@ -11,7 +11,6 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.scrolloff = 10
 vim.opt.laststatus = 0
 vim.g.zig_fmt_autosave = true
-vim.g.rustfmt_autosave = true
 
 vim.diagnostic.config({
 	virtual_text = true,
@@ -22,28 +21,58 @@ vim.diagnostic.config({
 })
 
 _G.lsps = {
-	"zls",
-	"rust_analyzer",
-	"clangd",
-	"bashls",
-	"html",
-	"cssls",
-	"ts_ls",
-	"tailwindcss",
-	"lua_ls",
+	bashls = {
+		cmd = { "bash-language-server", "start" },
+		filetypes = { "sh" },
+	},
+	zls = {
+		cmd = { "zls" },
+		filetypes = { "zig" },
+	},
+	clangd = {
+		cmd = { "clangd" },
+		filetypes = { "c", "cpp" },
+	},
+	lua_ls = {
+		cmd = { "lua-language-server" },
+		filetypes = { "lua" },
+		settings = {
+			Lua = { diagnostics = { globals = { "vim" } } },
+		},
+	},
+	ts_ls = {
+		cmd = { "typescript-language-server", "--stdio" },
+		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+	},
+	tailwindcss = {
+		cmd = { "tailwindcss-language-server", "--stdio" },
+		filetypes = { "html", "css", "javascript", "javascriptreact", "typescript", "typescriptreact" },
+	},
+	html = {
+		cmd = { "vscode-html-language-server", "--stdio" },
+		filetypes = { "html" },
+	},
+	cssls = {
+		cmd = { "vscode-css-language-server", "--stdio" },
+		filetypes = { "css", "scss" },
+	},
+	jsonls = {
+		cmd = { "vscode-json-language-server", "--stdio" },
+		filetypes = { "json", "jsonc" },
+	},
 }
 _G.formatters = {
+	bash = { "shfmt" },
 	c = { "clang-format" },
 	cpp = { "clang-format" },
-	bash = { "shfmt" },
-	html = { "prettier" },
-	css = { "prettier" },
+	lua = { "stylua" },
 	javascript = { "prettier" },
 	typescript = { "prettier" },
 	javascriptreact = { "prettier" },
 	typescriptreact = { "prettier" },
+	html = { "prettier" },
+	css = { "prettier" },
 	json = { "prettier" },
-	lua = { "stylua" },
 }
 _G.border_style = "single"
 
